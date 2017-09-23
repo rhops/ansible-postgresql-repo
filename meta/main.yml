@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Jeff Li
-  description: Configure PostgreSQL upstream repository
+  description: Configure PostgreSQL upstream YUM repository
   license: MIT
   min_ansible_version: 2.3
   platforms:
