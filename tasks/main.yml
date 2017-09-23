@@ -2,13 +2,13 @@
 - name: import postgresql repository key
   rpm_key:
     state: present
-    key: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-{{ postgresql_short_version }}
+    key: "{{ postgresql_repo_host }}/repos/yum/RPM-GPG-KEY-PGDG-{{ postgresql_short_version }}"
     validate_certs: yes
 
 - name: install postgresql repository
   yum_repository:
-    name: influxdata
-    baseurl: "{{ postgresql_repo_url }}"
+    name: postgresql
+    baseurl: "{{ postgresql_repo_host }}/repos/yum/{{ postgresql_version }}/redhat/rhel-{{ ansible_distribution_major_version }}-{{ ansible_architecture }}/"
     description: PostgreSQL Yum Repository
     gpgcheck: yes
     enabled: "{{ postgresql_repo_enabled }}"

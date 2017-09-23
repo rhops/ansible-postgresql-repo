@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Jeff Li
-  description: Install PostgreSQL from upstream repository
+  description: Configure PostgreSQL upstream repository
   license: MIT
   min_ansible_version: 2.3
   platforms:
@@ -10,4 +10,5 @@ galaxy_info:
         - 7
   categories:
     - database
+    - postgresql
 dependencies: []
